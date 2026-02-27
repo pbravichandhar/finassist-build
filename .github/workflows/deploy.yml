@@ -1,0 +1,51 @@
+name: Deploy fin-assist to GitHub Pages
+
+on:
+  # Deploy whenever dist files are pushed to master
+  push:
+    branches:
+      - master
+  # Allow manual trigger
+  workflow_dispatch:
+
+# Sets permissions for GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. Checkout this repo containing the pre-built Angular dist files
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      # 2. Create 404.html for SPA routing support
+      - name: Create 404.html for SPA routing
+        run: cp dist/fin-assist/browser/index.html dist/fin-assist/browser/404.html
+
+      # 3. Configure GitHub Pages
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      # 4. Upload the Angular dist output as a Pages artifact
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist/fin-assist/browser
+
+      # 5. Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

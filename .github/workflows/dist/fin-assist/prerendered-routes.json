@@ -1,0 +1,9 @@
+{
+  "routes": {
+    "/angular-practise": {},
+    "/angular-practise/mf-calculator": {},
+    "/angular-practise/nps-calculator": {},
+    "/angular-practise/ppf-calculator": {},
+    "/angular-practise/user-profile": {}
+  }
+}
