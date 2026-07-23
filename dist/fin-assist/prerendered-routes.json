@@ -1,14 +1,15 @@
 {
   "routes": {
-    "/angular-practise": {},
-    "/angular-practise/ai-chat": {},
-    "/angular-practise/goal-tracker": {},
-    "/angular-practise/health-score": {},
-    "/angular-practise/mf-calculator": {},
-    "/angular-practise/nps-calculator": {},
-    "/angular-practise/ppf-calculator": {},
-    "/angular-practise/tax-optimizer": {},
-    "/angular-practise/user-profile": {},
-    "/angular-practise/what-if": {}
+    "/finassist-build": {},
+    "/finassist-build/ai-chat": {},
+    "/finassist-build/author": {},
+    "/finassist-build/goal-tracker": {},
+    "/finassist-build/health-score": {},
+    "/finassist-build/mf-calculator": {},
+    "/finassist-build/nps-calculator": {},
+    "/finassist-build/ppf-calculator": {},
+    "/finassist-build/tax-optimizer": {},
+    "/finassist-build/user-profile": {},
+    "/finassist-build/what-if": {}
   }
 }
