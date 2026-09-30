@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://pbravichandhar.github.io/finassist-build/sitemap.xml

@@ -1,0 +1,1 @@
+import{J as n}from"./chunk-TU5ATRPS.js";var t=class e{transform(r){return r==null?"\u20B90":new Intl.NumberFormat("en-IN",{style:"currency",currency:"INR",maximumFractionDigits:0}).format(r)}static \u0275fac=function(i){return new(i||e)};static \u0275pipe=n({name:"inrCurrency",type:e,pure:!0})};export{t as a};
